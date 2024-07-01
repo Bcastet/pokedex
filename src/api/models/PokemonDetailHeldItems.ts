@@ -66,7 +66,6 @@ export function PokemonDetailHeldItemsFromJSONTyped(json: any, ignoreDiscriminat
     return {
         
         'item': AbilityDetailPokemonInnerPokemonFromJSON(json['item']),
-        'versionDetails': ((json['version_details'] as Array<any>).map(ItemDetailHeldByPokemonInnerVersionDetailsInnerFromJSON)),
     };
 }
 
@@ -77,7 +76,6 @@ export function PokemonDetailHeldItemsToJSON(value?: PokemonDetailHeldItems | nu
     return {
         
         'item': AbilityDetailPokemonInnerPokemonToJSON(value['item']),
-        'version_details': ((value['versionDetails'] as Array<any>).map(ItemDetailHeldByPokemonInnerVersionDetailsInnerToJSON)),
     };
 }
 
